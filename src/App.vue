@@ -1,17 +1,7 @@
-<script setup>
-// lcysb
-import Home from "./views/home/index.vue";
-</script>
+<script setup></script>
 
 <template>
-  <Home></Home>
+  <router-view></router-view>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #333;
-}
-</style>
+<style lang="scss"></style>
