@@ -1,5 +1,6 @@
 <script setup>
-import Home from "./views/home/index.vue"
+// lcysb
+import Home from "./views/home/index.vue";
 </script>
 
 <template>
