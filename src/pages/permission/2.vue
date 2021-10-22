@@ -1,4 +1,4 @@
-<template><router-view></router-view></template>
+<template>子菜单2</template>
 
 <script>
 export default {}

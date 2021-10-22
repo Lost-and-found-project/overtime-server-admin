@@ -1,7 +1,14 @@
-<template></template>
+<template>
+  <Bread></Bread>
+</template>
 
 <script>
-export default {};
+import Bread from "./components/breadcrumb.vue"
+export default {
+  components: {
+    Bread,
+  },
+}
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>

@@ -6,10 +6,11 @@ const Home = () => import("../views/home/index.vue");
 const routes = [
   {
     path: "/",
-    redirect: "/home",
+    redirect: "/index",
   },
   {
     path: "/home",
+    redirect: "/index",
     component: Home,
     children: [...menuRoutes],
   },

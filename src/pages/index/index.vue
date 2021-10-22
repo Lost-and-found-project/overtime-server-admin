@@ -1,4 +1,4 @@
-<template><router-view></router-view></template>
+<template>首页</template>
 
 <script>
 export default {}

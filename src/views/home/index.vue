@@ -1,44 +1,41 @@
 <template>
   <el-container id="home">
-    <el-header><Header></Header></el-header>
+    <el-aside><Aside></Aside></el-aside>
     <el-container id="bottom">
-      <el-aside><Aside></Aside></el-aside>
+      <el-header><Header></Header></el-header>
       <el-main><Main></Main></el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
-import Header from "./components/header/index.vue";
-import Aside from "./components/aside/index.vue";
-import Main from "./components/main/index.vue";
+import Header from "./components/header/index.vue"
+import Aside from "./components/aside/index.vue"
+import Main from "./components/main/index.vue"
 export default {
   components: {
     Header,
     Aside,
     Main,
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
 .el-header {
-  background-color: #b3c0d1;
-  color: var(--el-text-color-primary);
-  text-align: center;
-  line-height: 60px;
+  background-color: #f0f2f5;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.el-aside {
-  color: var(--el-text-color-primary);
-  text-align: center;
-}
-
 .el-main {
-  background-color: #e9eef3;
-  color: var(--el-text-color-primary);
-  text-align: center;
-  line-height: 160px;
+  background-color: #fff;
+  padding: 20px;
+}
+.el-aside {
+  width: auto;
+  background-color: #001529;
 }
 #home {
   position: absolute;
