@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import { menuRoutes } from "./menu/index.js";
 
 const Home = () => import("../views/home/index.vue");
 
@@ -10,6 +11,7 @@ const routes = [
   {
     path: "/home",
     component: Home,
+    children: [...menuRoutes],
   },
 ];
 
