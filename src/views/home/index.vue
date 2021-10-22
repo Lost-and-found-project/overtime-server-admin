@@ -1,14 +1,25 @@
 <template>
   <el-container id="home">
-    <el-header>Header</el-header>
-    <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-main>Main</el-main>
+    <el-header><Header></Header></el-header>
+    <el-container id="bottom">
+      <el-aside><Aside></Aside></el-aside>
+      <el-main><Main></Main></el-main>
     </el-container>
   </el-container>
 </template>
 
-<script></script>
+<script>
+import Header from "./components/header/index.vue";
+import Aside from "./components/aside/index.vue";
+import Main from "./components/main/index.vue";
+export default {
+  components: {
+    Header,
+    Aside,
+    Main,
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .el-header {
@@ -19,10 +30,8 @@
 }
 
 .el-aside {
-  background-color: #d3dce6;
   color: var(--el-text-color-primary);
   text-align: center;
-  line-height: 200px;
 }
 
 .el-main {
@@ -30,5 +39,12 @@
   color: var(--el-text-color-primary);
   text-align: center;
   line-height: 160px;
+}
+#home {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 </style>
