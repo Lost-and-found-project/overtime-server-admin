@@ -19,6 +19,12 @@
 </template>
 
 <script>
+import {
+  setTabList,
+  getTabList,
+  setTabPath,
+  getTabPath,
+} from "../../../../storage/index.js"
 export default {
   data() {
     return {
@@ -67,23 +73,16 @@ export default {
         this.$router.replace({ path: "/index" })
       }
       if (!this.findObject(this.$route.path)) {
-        if (idx === this.routeList.length) {
-          this.$router.replace({ path: this.routeList[0].path })
-          this.active = this.routeList[0].path
-        } else {
-          this.$router.replace({ path: this.routeList[idx].path })
-          this.active = this.routeList[idx].path
-        }
+        const routeIdx = idx === this.routeList.length ? 0 : idx
+        this.$router.replace({ path: this.routeList[routeIdx].path })
+        this.active = this.routeList[routeIdx].path
       }
     },
   },
   created() {
-    if (
-      sessionStorage.getItem("adminTabList") &&
-      sessionStorage.getItem("adminTabPath")
-    ) {
-      this.active = sessionStorage.getItem("adminTabPath")
-      this.routeList = JSON.parse(sessionStorage.getItem("adminTabList"))
+    if (getTabList() && getTabPath()) {
+      this.active = getTabPath()
+      this.routeList = getTabList()
     } else {
       if (this.$route.path !== "/index") {
         this.routeList.push({
@@ -106,11 +105,11 @@ export default {
         })
         this.active = val.path
       }
-      sessionStorage.setItem("adminTabPath", val.path)
+      setTabPath(val.path)
     },
     routeList: {
       handler(val) {
-        sessionStorage.setItem("adminTabList", JSON.stringify(val))
+        setTabList(val)
       },
       deep: true,
     },
