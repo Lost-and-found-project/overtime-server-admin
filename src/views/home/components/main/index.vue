@@ -24,7 +24,7 @@ import {
   getTabList,
   setTabPath,
   getTabPath,
-} from "../../../../storage/index.js"
+} from "../../../../utils/storage/index.js"
 export default {
   data() {
     return {

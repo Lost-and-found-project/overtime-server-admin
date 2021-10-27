@@ -5,7 +5,7 @@ import {
   setSession,
   getSession,
   removeSession
-} from "../utils/storage.js"
+} from "./storage.js"
 
 import * as C from "./constants.js"
 
