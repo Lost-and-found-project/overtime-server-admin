@@ -4,7 +4,7 @@
  * @param value {any} 值
  */
 export const setStorage = (key, value) => {
-  localStorage.setItem(key, JSON.stringify(value))
+    localStorage.setItem(key, JSON.stringify(value))
 }
 
 /**
@@ -13,12 +13,12 @@ export const setStorage = (key, value) => {
  * @param parse {Boolean} 是否进行JSON.parse操作
  */
 export const getStorage = (key, parse = false) => {
-  const result = localStorage.getItem(key)
-  if (!result) {
-    return false
-  } else {
-    return parse ? JSON.parse(result) : result
-  }
+    const result = localStorage.getItem(key)
+    if (!result) {
+        return false
+    } else {
+        return parse ? JSON.parse(result) : result
+    }
 }
 
 /**
@@ -27,9 +27,9 @@ export const getStorage = (key, parse = false) => {
  * @return {String} 删除的对象
  */
 export const removeStorage = (key) => {
-  const obj = getStorage(key)
-  localStorage.removeItem(key)
-  return obj
+    const obj = getStorage(key)
+    localStorage.removeItem(key)
+    return obj
 }
 
 /**
@@ -38,7 +38,7 @@ export const removeStorage = (key) => {
  * @param value {any} 值
  */
 export const setSession = (key, value) => {
-  sessionStorage.setItem(key, JSON.stringify(value))
+    sessionStorage.setItem(key, JSON.stringify(value))
 }
 
 /**
@@ -47,12 +47,12 @@ export const setSession = (key, value) => {
  * @param parse {Boolean} 是否进行JSON.parse操作
  */
 export const getSession = (key, parse = false) => {
-  const result = sessionStorage.getItem(key)
-  if (!result) {
-    return false
-  } else {
-    return parse ? JSON.parse(result) : result
-  }
+    const result = sessionStorage.getItem(key)
+    if (!result) {
+        return false
+    } else {
+        return parse ? JSON.parse(result) : result
+    }
 }
 
 /**
@@ -61,7 +61,7 @@ export const getSession = (key, parse = false) => {
  * @return {String} 删除的对象
  */
 export const removeSession = (key) => {
-  const obj = getStorage(key)
-  sessionStorage.removeItem(key)
-  return obj
+    const obj = getStorage(key)
+    sessionStorage.removeItem(key)
+    return obj
 }

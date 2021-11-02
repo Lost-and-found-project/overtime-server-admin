@@ -1,11 +1,4 @@
-import {
-  setStorage,
-  getStorage,
-  removeStorage,
-  setSession,
-  getSession,
-  removeSession,
-} from "./storage.js";
+import {getSession, setSession,} from "./storage.js";
 
 import * as C from "./constants.js";
 
